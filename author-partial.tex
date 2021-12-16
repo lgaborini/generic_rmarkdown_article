@@ -166,7 +166,7 @@ $sep$\thankssep%
 $endfor$
 $if(author.corresponding_author)$
 $if(author.affiliation)$\thankssep$endif$% extra comma
-\thanksANote{Corresponding author. \href{mailto:$author.email$}{\nolinkurl{$author.email$}}} % space here seems necessary to get spacing right
+\thanksANote{Corresponding author. $author.email$} % space here seems necessary to get spacing right
 $endif$
 $if(author.footnote)$$if(author.affiliation)$\thankssep$elseif(author.corresponding_author)$\thankssep$endif$$endif$% extra comma
 $for(author.footnote)$
