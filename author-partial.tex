@@ -153,7 +153,7 @@ $else$ % Use footnotes for affiliations %%%%%%%%%%%%%
 }
 \makeatother
 
-\newcommand*\authsep{, }
+\newcommand*\authsep{, \and}
 \newcommand*\thankssep{$$^{,}$$}
 
 $if(author)$
@@ -171,9 +171,9 @@ $endif$
 $if(author.footnote)$$if(author.affiliation)$\thankssep$elseif(author.corresponding_author)$\thankssep$endif$$endif$% extra comma
 $for(author.footnote)$
 \thanksANotebycode{$author.footnote$}%
-$sep$\thankssep%
+$sep$\thankssep
 $endfor$
-$sep$\authsep%
+$sep$\authsep
 $endfor$
 }
 $endif$%endif(author)
